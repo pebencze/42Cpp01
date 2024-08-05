@@ -6,30 +6,31 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:54:33 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 11:14:50 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/05 11:56:54 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include <iostream>
 
-Zombie::Zombie(void) {
+Zombie::Zombie() {
+    std::cout << "Zombie created." << std::endl;
     return ;
 }
 
 Zombie::~Zombie(void) {
-    std::cout << getName() << "destroyed.";
+    std::cout << getName() << ": destroyed." << std::endl;
     return ;
 }
 
-Zombie::announce(void) const {
-    std::cout << getName() << "BraiiiiiiinnnzzzZ..." << std::endl;
+void Zombie::announce(void) const {
+    std::cout << getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-Zombie::getName() const {
+std::string Zombie::getName() const {
     return (this->name);
 }
 
-Zombie::setName(std::string name) {
+void Zombie::setName(std::string name) {
     this->name = name;
 }
