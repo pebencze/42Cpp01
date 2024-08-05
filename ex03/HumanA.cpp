@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 14:49:42 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 15:47:17 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/05 16:37:39 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ HumanA::~HumanA(){
 	return ;
 }
 
-void HumanA::attack(){
+void HumanA::attack() const {
 	std::cout << this->name << " attacks with their " << this->weapon.getType() << std::endl;
 }
 

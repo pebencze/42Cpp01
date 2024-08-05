@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 14:49:45 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 15:45:46 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/05 16:37:30 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ public:
 	HumanA( std::string input1, Weapon& input2 );
 	~HumanA();
 
-	void attack();
+	void attack() const;
 
+private:
 	Weapon& weapon;
 	std::string name;
 };

@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 14:49:48 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 15:42:13 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/05 16:37:47 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ HumanB::~HumanB(){
 	return ;
 }
 
-void HumanB::setWeapon( Weapon weapon ){
-	*(this->weapon) = weapon;
+void HumanB::setWeapon( Weapon &weapon ){
+	this->weapon = &weapon;
 }
 
-void HumanB::attack(){
+void HumanB::attack() const {
 	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
 }

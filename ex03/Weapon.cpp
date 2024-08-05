@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 14:49:57 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 15:26:19 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/05 16:37:21 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Weapon::~Weapon(){
 	return ;
 }
 
-const std::string& Weapon::getType(){
+const std::string& Weapon::getType() const {
 	return (this->type);
 }
 

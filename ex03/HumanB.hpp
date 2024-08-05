@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 14:49:51 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 15:51:31 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/05 16:38:05 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ public:
 	HumanB( std::string name );
 	~HumanB();
 
-	void attack();
-	void setWeapon( Weapon weapon );
+	void attack() const ;
+	void setWeapon( Weapon &weapon );
 
-	std::string name;
 
 private:
 	Weapon* weapon;
+	std::string name;
 };
 
 #endif
