@@ -6,15 +6,22 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:54:40 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 12:02:16 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/19 14:23:10 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
+#include <sstream>
 #include <iostream>
 
+std::string to_string(int value) {
+    std::ostringstream oss;
+    oss << value;
+    return oss.str();
+}
+
 int main() {
-    Zombie* z = Zombie::newZombie("Newbie");
+    Zombie* z = newZombie("Newbie");
     z->announce(); //use of announce outside of the function
     delete z;
 
@@ -22,13 +29,13 @@ int main() {
 
     Zombie* zlist = new Zombie[5];
     for (int i = 0; i < 5; i++) {
-        zlist[i].setName("Zombie" + std::to_string(i));
+        zlist[i].setName("Zombie" + to_string(i));
         zlist[i].announce();
     }
     delete [] zlist;
 
     std::cout << std::endl;
-    
-    Zombie::randomChump("Chumpie"); //use of announce inside of the function
+
+    randomChump("Chumpie"); //use of announce inside of the function
     return 0;
 }

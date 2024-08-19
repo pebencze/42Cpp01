@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:54:33 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 11:56:54 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/19 14:15:33 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void Zombie::announce(void) const {
 }
 
 std::string Zombie::getName() const {
-    return (this->name);
+    return (this->_name);
 }
 
 void Zombie::setName(std::string name) {
-    this->name = name;
+    this->_name = name;
 }

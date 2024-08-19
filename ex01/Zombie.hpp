@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:54:28 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 14:21:18 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/19 14:14:16 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Zombie {
     static Zombie* zombieHorde( int N, std::string name );
 
     private:
-    std::string name;
+    std::string _name;
 };
 
 #endif
