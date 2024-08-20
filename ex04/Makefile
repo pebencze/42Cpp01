@@ -19,6 +19,7 @@ clean:
 
 fclean: clean
 	@rm -rf $(NAME)
+	@rm -f test/*.replace
 
 re: fclean all
 

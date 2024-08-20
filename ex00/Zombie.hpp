@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 10:54:28 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/19 14:19:44 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/20 14:34:57 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 
 class Zombie {
     public:
-    Zombie();
-    ~Zombie(void);
+    	Zombie();
+    	~Zombie(void);
 
-    std::string getName() const;
-    void setName(std::string name);
+    	std::string getName() const;
+    	void setName(std::string name);
 
-    void announce(void) const;
+    	void announce(void) const;
 
     private:
-    std::string _name;
+    	std::string _name;
 };
 
 void randomChump(std::string name);
