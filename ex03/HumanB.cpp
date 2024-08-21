@@ -6,7 +6,7 @@
 /*   By: pbencze <pbencze@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/05 14:49:48 by pbencze           #+#    #+#             */
-/*   Updated: 2024/08/05 16:37:47 by pbencze          ###   ########.fr       */
+/*   Updated: 2024/08/21 15:58:33 by pbencze          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "HumanB.hpp"
 
 HumanB::HumanB( std::string name ) : name(name) {
+	weapon = NULL;
 	return ;
 }
 
@@ -26,5 +27,8 @@ void HumanB::setWeapon( Weapon &weapon ){
 }
 
 void HumanB::attack() const {
-	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+	if (weapon)
+		std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+	else
+		std::cout << this->name << " has no weapon" << std::endl;
 }
